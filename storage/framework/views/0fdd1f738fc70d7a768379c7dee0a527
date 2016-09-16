@@ -1,0 +1,26 @@
+
+
+<?php $__env->startSection('browsertitle'); ?>
+  Reviews
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+  <h1>Reviews</h1>
+
+
+  <div class="list-group">
+    <?php foreach($reviews as $item): ?>
+      <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading"><u><?php echo $item->title; ?></u></h4>
+        <p style="color: #008080">Reviewed by <strong><?php echo $item->fullname; ?></strong></p>
+        <p class="list-group-item-text"><?php echo date("F d, y", strtotime($item->created_at)); ?></p>
+        <h5><strong><?php echo $item->review; ?></strong></h5>
+      </a>
+      <br>
+    <?php endforeach; ?>
+  </div>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
