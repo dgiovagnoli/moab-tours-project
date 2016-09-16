@@ -1,0 +1,9 @@
+<?php if(isset($_SESSION['msg'])): ?>
+<div class="alert alert-danger" role="alert">
+  <ul>
+      <?php foreach($_SESSION['msg'] as $error): ?>
+        <li><?php echo $error; ?></li>
+      <?php endforeach; ?>
+  </ul>
+</div>
+<?php endif; ?>
