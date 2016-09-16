@@ -9,8 +9,7 @@ class SendEmail
         $from = getenv('MAIL_USERNAME');
 
 
-    $transport = \Swift_SmtpTransport::newInstance(getenv('MAIL_ENCRYPTION'), getenv('MAIL_HOST'), getenv('MAIL_PORT'))
-        ->setEncryption(getenv('MAIL_ENCRYPTION'))
+    $transport = \Swift_SmtpTransport::newInstance(getenv('MAIL_HOST'), getenv('MAIL_PORT'))
         ->setUsername(getenv('MAIL_USERNAME'))
         ->setPassword(getenv('MAIL_PASSWORD'));
 
