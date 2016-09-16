@@ -6,12 +6,12 @@ class SendEmail
   public static function sendEmail($to, $subject, $message, $from = "")
   {
     if(strlen($from) == 0)
-        $from = getenv('SMTP_FROM');
+        $from = getenv('MAIL_USERNAME');
 
 
-    $transport = \Swift_SmtpTransport::newInstance(getenv('SMTP_HOST'), getenv('SMTP_PORT'))
-        ->setUsername(getenv('SMTP_USER'))
-        ->setPassword(getenv('SMTP_PASS'));
+    $transport = \Swift_SmtpTransport::newInstance(getenv('MAIL_HOST'), getenv('MAIL_PORT'))
+        ->setUsername(getenv('MAIL_USERNAME'))
+        ->setPassword(getenv('MAIL_PASSWORD'));
 
     $mailer = \Swift_Mailer::newInstance($transport);
 
