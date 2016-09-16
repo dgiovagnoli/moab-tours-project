@@ -1,0 +1,32 @@
+paths:
+    migrations: %%PHINX_CONFIG_DIR%%/migrations
+
+environments:
+    default_migration_table: phinxlog
+    default_database: development
+    production:
+        adapter: pgsql
+        host: ec2-23-23-225-158.compute-1.amazonaws.com
+        name: d4nemeolj8ucft
+        user: lqkkmtzzpaghmp
+        pass: 'f8QNPVHHHc6ewIiMjLmph6Jo8O'
+        port: 5432
+        charset: utf8
+
+    development:
+        adapter: pgsql
+        host: ec2-23-23-225-158.compute-1.amazonaws.com
+        name: d4nemeolj8ucft
+        user: lqkkmtzzpaghmp
+        pass: 'f8QNPVHHHc6ewIiMjLmph6Jo8O'
+        port: 5432
+        charset: utf8
+
+    testing:
+        adapter: pgsql
+        host: ec2-23-23-225-158.compute-1.amazonaws.com
+        name: d4nemeolj8ucft
+        user: lqkkmtzzpaghmp
+        pass: 'f8QNPVHHHc6ewIiMjLmph6Jo8O'
+        port: 5432
+        charset: utf8
