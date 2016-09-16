@@ -1,4 +1,7 @@
 <?php
+namespace Project\Email;
+
+
 return [
     'driver' => env('MAIL_DRIVER', 'smtp'),
     'host' => env('MAIL_HOST', 'smtp.gmail.com'),
@@ -15,7 +18,6 @@ return [
 
 
 
-namespace Project\Email;
 
 class SendEmail
 {
